@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         'bgBlack': '#050505',
         'customPurple': '#7D53F3',
-      }
+      },
     },
     fontFamily: {
       'helve': ['Helvetica Neue', 'sans-serif'],
