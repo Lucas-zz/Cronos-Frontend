@@ -20,15 +20,13 @@ export default function Header() {
             ))}
         </div>
         <motion.a
-          className="hidden md:flex items-center space-x-2 cursor-pointer text-base md:text-lg lg:text-2xl"
-          whileHover={{ scale: 1.1 }}
-          whileFocus={{ scale: 1.1 }}
-          whileTap={{ scale: 1 }}
+          className="hidden md:flex items-center space-x-2 cursor-pointer text-base md:text-lg lg:text-2xl group"
+          whileTap={{ scale: 0.9 }}
         >
           <span className="font-medium leading-9">
             {header_content.link.title}
           </span>
-          <Image src={RightVector} alt="Arrow to the right" className="w-12 h-4 md:h-4 lg:h-6" />
+          <Image src={RightVector} alt="Arrow to the right" className="w-12 h-4 md:h-4 lg:h-6 delay-100 transition-all group-hover:translate-x-2" />
         </motion.a>
         <div className="md:hidden" onClick={() => setMobileMenu(!mobileMenu)}>
           {
