@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion"
 import RightVector from "../../../../public/assets/right-vector.svg";
 import { FiAlignJustify, FiX } from "react-icons/fi";
@@ -36,17 +36,12 @@ export default function Header() {
         <span className="font-medium text-base md:text-lg lg:text-2xl leading-9">
           {header_content.logo.title}
         </span>
-        <ul className="hidden item-center md:flex font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-7">
+        <div className="hidden item-center md:flex font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-7">
           {header_content?.menu &&
             header_content?.menu.map((item) => (
-              <li
-                className="mx-6 cursor-pointer transition duration-300 ease-in-out hover:text-customPurple"
-                key={item.title}
-              >
-                {item?.title}
-              </li>
+              <HeaderComponent key={item.title} link="#" active={item.active}>{item.title}</HeaderComponent>
             ))}
-        </ul>
+        </div>
         <motion.a
           className="hidden md:flex items-center space-x-2 cursor-pointer text-base md:text-lg lg:text-2xl"
           whileHover={{ scale: 1.1 }}
@@ -69,4 +64,17 @@ export default function Header() {
       <MobileMenu mobileMenu={mobileMenu} />
     </header>
   );
+}
+
+type HeaderComponents = {
+  link: string;
+  active?: boolean;
+};
+
+function HeaderComponent({ children, link, active }: React.PropsWithChildren<HeaderComponents>) {
+  return (
+    <a href={link} className="mx-6 cursor-pointer transition duration-300 ease-in-out hover:text-customPurple">
+      {children}
+    </a>
+  )
 }
