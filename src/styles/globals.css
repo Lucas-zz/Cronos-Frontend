@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
 html,
 body,
 div,
@@ -126,6 +136,10 @@ q:before,
 q:after {
   content: '';
   content: none;
+}
+
+input {
+  all: unset;
 }
 
 table {
