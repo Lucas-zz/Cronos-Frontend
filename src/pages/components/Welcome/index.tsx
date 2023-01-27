@@ -8,9 +8,9 @@ export default function Welcome() {
         <div className="flex-col mt-28 relative w-full">
             <motion.div
                 initial={{ x: "0%" }}
-                animate={{ x: "calc(100vw - 160%)" }}
+                animate={{ x: "20%" }}
                 transition={{
-                    duration: 20, repeat: Infinity,
+                    duration: 15, repeat: Infinity,
                     repeatType: 'reverse'
                 }}
             >
@@ -20,10 +20,10 @@ export default function Welcome() {
             <span className="flex relative z-10 justify-center text-[45px] min-[480px]:text-[60px] sm:text-[80px] md:text-[100px] lg:text-[125px] xl:text-[153px] font-helve font-normal tracking-[0.02em] leading-[60px] sm:leading-[100px] lg:leading-[120px] xl:leading-[181px] py-12 sm:py-8 md:py-4 text-center text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500">The Internet of Blockchains</span>
             <span className="flex relative z-10 justify-center text-lg sm:text-xl md:text-3xl font-dm font-normal tracking-[0.01em] leading-5 md:leading-10 px-8 sm:px-16 md:px-28 lg:px-56 text-center text-white">Cronos is an ever expanding ecosystem of connected apps and services, built for a decentralized future</span>
             <motion.div
-                initial={{ x: "60%" }}
-                animate={{ x: "calc(100vw - 100%)" }}
+                initial={{ x: "70%" }}
+                animate={{ x: "60%" }}
                 transition={{
-                    duration: 25, repeat: Infinity,
+                    duration: 20, repeat: Infinity,
                     repeatType: 'reverse'
                 }}
             >
