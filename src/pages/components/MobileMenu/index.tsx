@@ -20,9 +20,9 @@ export default function MobileMenu({ mobileMenu }: Props) {
                         initial={{ opacity: 0, scale: 1 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 1 }}
-                        className='absolute top-full w-full bg-bgBlack md:hidden'
+                        className='absolute z-20 w-full bg-bgBlack md:hidden'
                     >
-                        <div className='flex flex-col divide-y divide-customPurple text-center' >
+                        <div className='flex flex-col divide-y-2 divide-customPurple text-center' >
                             {header_content &&
                                 header_content.menu.map((item) => (
                                     <MobileMenuComponent key={item.title} title={item.title} active={item.active} />
