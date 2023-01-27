@@ -17,10 +17,10 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
-        <link rel="icon" href="/assets/icosahedron.png" />
+        <link rel="icon" href="/assets/yuan.png" />
       </Head>
       <Header />
-      <main className="min-h-xl w-full m-auto flex-col justify-center items-start">
+      <main className="min-h-xl max-w-screen-xl m-auto flex-col justify-center items-start">
         <Welcome />
         <Community />
         <Image loading="lazy" src={resourceBg} className='relative z-10 py-36 m-auto' alt="Testing Image from Next" />
