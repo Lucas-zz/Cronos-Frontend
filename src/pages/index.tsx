@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "./components/Header";
 import Image from "next/image";
 import resourceBg from "public/assets/yuan.png";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,9 +17,10 @@ export default function Home() {
         <link rel="icon" href="/assets/icosahedron.png" />
       </Head>
       <Header />
-      <main className="min-h-xl max-w-screen-2xl m-auto flex-col justify-between items-center">
+      <main className="min-h-xl max-w-screen-xl m-auto flex justify-center items-center pt-36">
         <Image src={resourceBg} alt="Testing Image from Next" />
       </main>
+      <Footer />
     </>
   );
 }
