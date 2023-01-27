@@ -11,7 +11,7 @@ export default function Newsletter() {
     }
 
     return (
-        <div className="flex-col max-w-screen-xl m-auto">
+        <div className="flex-col w-full">
             <div className="w-full h-[1px] bg-gray-900 mb-36" />
             <div className="flex-col font-dm sm:pl-16 md:pl-24 pl-6 m-auto -translate-y-10 md:translate-y-0">
                 <span className="font-bold text-xl max-[300px]:text-2xl sm:text-4xl md:text-3xl lg:text-4xl tracking-[0.01em]">Receive transmissions</span>

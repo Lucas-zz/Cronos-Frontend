@@ -23,7 +23,7 @@ export default function Header() {
           className="hidden md:flex items-center space-x-2 cursor-pointer text-base md:text-lg lg:text-2xl"
           whileHover={{ scale: 1.1 }}
           whileFocus={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
+          whileTap={{ scale: 1 }}
         >
           <span className="font-medium leading-9">
             {header_content.link.title}
