@@ -31,8 +31,8 @@ export const header_content = {
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
-    <header className="w-full m-auto shadow-md bg-bgBlack relative z-10 select-none">
-      <nav className="max-w-screen-2xl mx-auto flex justify-between items-center py-6 sm:py-8 md:py:16 lg:py-16 px-8 md:px-16 lg:px-14 xl:px-10 2xl:px-0 font-md ">
+    <header className="w-full m-auto shadow-md bg-bgBlack relative z-10 select-none font-dm">
+      <nav className="max-w-screen-xl mx-auto flex justify-between items-center py-6 sm:py-8 md:py:16 lg:py-16 px-8 md:px-16 lg:px-14 xl:px-10 2xl:px-0">
         <span className="font-medium text-base md:text-lg lg:text-2xl leading-9">
           {header_content.logo.title}
         </span>
