@@ -5,29 +5,6 @@ import RightVector from "../../../../public/assets/right-vector.svg";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import MobileMenu from "../MobileMenu";
 
-export const header_content = {
-  logo: {
-    title: "CRONOS",
-  },
-  menu: [
-    {
-      title: "Learn",
-      active: true,
-    },
-    {
-      title: "Build",
-      active: false,
-    },
-    {
-      title: "Explore",
-      active: false,
-    }
-  ],
-  link: {
-    title: "Get CRONOS",
-  },
-};
-
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
@@ -64,7 +41,7 @@ export default function Header() {
       <MobileMenu mobileMenu={mobileMenu} />
     </header>
   );
-}
+};
 
 type HeaderComponents = {
   link: string;
@@ -77,4 +54,27 @@ function HeaderComponent({ children, link, active }: React.PropsWithChildren<Hea
       {children}
     </a>
   )
-}
+};
+
+export const header_content = {
+  logo: {
+    title: "CRONOS",
+  },
+  menu: [
+    {
+      title: "Learn",
+      active: true,
+    },
+    {
+      title: "Build",
+      active: false,
+    },
+    {
+      title: "Explore",
+      active: false,
+    }
+  ],
+  link: {
+    title: "Get CRONOS",
+  },
+};
