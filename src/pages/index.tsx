@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Image from "next/image";
 import resourceBg from "public/assets/yuan.png";
 import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
+import Test from "./components/Testing";
 
 export default function Home() {
   return (
@@ -17,8 +19,10 @@ export default function Home() {
         <link rel="icon" href="/assets/icosahedron.png" />
       </Head>
       <Header />
-      <main className="min-h-xl max-w-screen-xl m-auto flex justify-center items-center pt-36">
-        <Image src={resourceBg} alt="Testing Image from Next" />
+      <main className="min-h-xl max-w-screen-xl m-auto flex-col justify-center items-start pt-36">
+        <Image src={resourceBg} className='py-36 m-auto' alt="Testing Image from Next" />
+        <Test />
+        <Newsletter />
       </main>
       <Footer />
     </>
