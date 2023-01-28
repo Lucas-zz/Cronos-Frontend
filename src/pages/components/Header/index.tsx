@@ -1,15 +1,23 @@
+'use client';
+
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion"
 import RightVector from "../../../../public/assets/right-vector.svg";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import MobileMenu from "../MobileMenu";
+import { navVariants } from "@/utils/motion";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <header className="w-full m-auto shadow-md bg-bgBlack z-50 select-none font-dm">
-      <nav className="max-w-screen-xl mx-auto flex justify-between items-center py-6 sm:py-8 md:py:16 lg:py-16 px-8 md:px-16 lg:px-14 xl:px-10 2xl:px-0">
+      <motion.nav
+        variants={navVariants}
+        initial="hidden"
+        whileInView="show"
+        className="max-w-screen-xl mx-auto flex justify-between items-center py-6 sm:py-8 md:py:16 lg:py-16 px-8 md:px-16 lg:px-14 xl:px-10 2xl:px-0"
+      >
         <span className="font-medium text-base md:text-lg lg:text-2xl leading-9">
           {header_content.logo.title}
         </span>
@@ -35,7 +43,7 @@ export default function Header() {
               : <FiAlignJustify className="h-6 w-6 cursor-pointer" />
           }
         </div>
-      </nav>
+      </motion.nav>
       <MobileMenu mobileMenu={mobileMenu} />
     </header>
   );
