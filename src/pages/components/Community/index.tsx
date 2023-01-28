@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image";
 import RightVector from "../../../../public/assets/right-vector.svg";
+import Helix from "../../../../public/assets/helix.png";
 
 export default function Community() {
     return (
@@ -38,16 +39,21 @@ export default function Community() {
                     </div>
                 </div>
             </div>
-            <div className="flex-col xl:w-[40%] pt-28 text-center xl:text-right">
+            <div className="flex-col xl:w-[40%] pt-10 sm:pt-28 text-center xl:text-right">
                 <div className="">
                     <div className="font-helve font-normal text-[90px] sm:text-[117px] leading-[139px] text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500">265+</div>
                     <span className="font-dm font-normal text-[25px] sm:text-[30px] leading-10">App & Services</span>
                 </div>
-                <div className="pt-36">
+                <div className="pt-10 sm:pt-36">
                     <div className="font-helve font-normal text-[90px] sm:text-[117px] leading-[139px] text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500">$63B+</div>
                     <span className="font-dm font-normal text-[25px] sm:text-[30px] leading-10">Digital assets</span>
                 </div>
             </div>
+            <Image
+                src={Helix}
+                alt="Helix background image."
+                className="absolute -z-10 top-[470px] -left-[200px] sm:-left-[350px] w-[400px] sm:w-[600px]"
+            />
         </div>
     );
 }
