@@ -4,7 +4,7 @@ import Image from "next/image";
 import Donut from "../../../../public/assets/donut.png";
 import { hub_content } from "@/utils/contentUtils";
 import { HubComponentsTypes } from "@/utils/typesUtils";
-import { Button } from "../CustomButton";
+import { Button } from "../../../utils/CustomButton";
 import { FiChevronRight } from "react-icons/fi";
 
 export default function Hub() {

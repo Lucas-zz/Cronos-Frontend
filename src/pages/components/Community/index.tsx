@@ -3,8 +3,8 @@ import Image from "next/image";
 import { FiChevronRight } from "react-icons/fi";
 import Helix from "../../../../public/assets/helix.png";
 import { textVariant } from "@/utils/motionUtils";
-import { Button } from "../CustomButton";
-import { TypingText } from "../CustomTexts";
+import { Button } from "../../../utils/CustomButton";
+import { TypingText } from "../../../utils/CustomTexts";
 
 export default function Community() {
     return (
