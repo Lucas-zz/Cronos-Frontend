@@ -1,17 +1,9 @@
 import React from 'react'
-import { header_content } from '../Header';
 import { AnimatePresence, motion } from "framer-motion"
+import { header_content } from '@/utils/contentUtils';
+import { MobileMenuComponents, PropsMobileMenu } from '@/utils/typesUtils';
 
-type Props = {
-    mobileMenu: boolean;
-}
-
-type MobileMenuComponents = {
-    title: string;
-    active: boolean;
-};
-
-export default function MobileMenu({ mobileMenu }: Props) {
+export default function MobileMenu({ mobileMenu }: PropsMobileMenu) {
     return (
         <AnimatePresence>
             {
@@ -27,8 +19,8 @@ export default function MobileMenu({ mobileMenu }: Props) {
                                 header_content.menu.map((item) => (
                                     <MobileMenuComponent key={item.title} title={item.title} active={item.active} />
                                 ))}
-                            <span className="flex text-xl justify-center items-center py-8 font-medium leading-9">
-                                <motion.a
+                            <a href='#' className="flex text-xl justify-center items-center py-8 font-medium leading-9">
+                                <motion.div
                                     initial={{ opacity: 0, scale: 0 }}
                                     transition={{ delay: 0.4 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -36,8 +28,8 @@ export default function MobileMenu({ mobileMenu }: Props) {
                                     className='cursor-pointer'
                                 >
                                     {header_content.link.title}
-                                </motion.a>
-                            </span>
+                                </motion.div>
+                            </a>
                         </div>
                     </motion.div>
                 )
@@ -48,7 +40,7 @@ export default function MobileMenu({ mobileMenu }: Props) {
 
 function MobileMenuComponent({ title, active }: MobileMenuComponents) {
     return (
-        <a href='#' className={`${active ? "text-customPurple" : "text-gray-600"} text-xl py-8 transition hover:text-customPurple first-of-type:pt-0`} key={title}>
+        <a href='#' className={`${active ? "text-customPurple" : "text-gray-600"} text-xl py-8 transition hover:text-customPurple`} key={title}>
             <motion.span
                 initial={{ opacity: 0, scale: 0 }}
                 transition={{ delay: 0.3 }}

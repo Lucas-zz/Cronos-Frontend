@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import Image from "next/image";
 import React, { useState } from "react";
@@ -6,10 +6,14 @@ import { motion } from "framer-motion"
 import RightVector from "../../../../public/assets/right-vector.svg";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import MobileMenu from "../MobileMenu";
-import { navVariants } from "@/utils/motion";
+import { navVariants } from "@/utils/motionUtils";
+import { header_content } from "@/utils/contentUtils";
+import { HeaderComponents } from "@/utils/typesUtils";
+import { FiChevronRight } from "react-icons/fi";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
     <header className="w-full m-auto shadow-md bg-bgBlack z-50 select-none font-dm">
       <motion.nav
@@ -34,7 +38,7 @@ export default function Header() {
           <span className="font-medium leading-9">
             {header_content.link.title}
           </span>
-          <Image src={RightVector} alt="Arrow to the right" className="w-12 h-4 md:h-4 lg:h-6 delay-100 transition-all group-hover:translate-x-2" />
+          <FiChevronRight className="w-12 h-6 lg:h-8 delay-100 transition-all group-hover:translate-x-2" />
         </motion.a>
         <div className="md:hidden" onClick={() => setMobileMenu(!mobileMenu)}>
           {
@@ -49,38 +53,10 @@ export default function Header() {
   );
 };
 
-type HeaderComponents = {
-  link: string;
-  active?: boolean;
-};
-
 function HeaderComponent({ children, link, active }: React.PropsWithChildren<HeaderComponents>) {
   return (
     <a href={link} className="mx-6 cursor-pointer transition duration-300 ease-in-out hover:text-customPurple">
       {children}
     </a>
   )
-};
-
-export const header_content = {
-  logo: {
-    title: "CRONOS",
-  },
-  menu: [
-    {
-      title: "Learn",
-      active: true,
-    },
-    {
-      title: "Build",
-      active: false,
-    },
-    {
-      title: "Explore",
-      active: false,
-    }
-  ],
-  link: {
-    title: "Get CRONOS",
-  },
 };
