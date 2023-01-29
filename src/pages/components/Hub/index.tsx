@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { fadeIn, textContainer, textVariant } from '@/utils/motionUtils';
+import { textContainer, textVariant } from '@/utils/motionUtils';
 import Image from "next/image";
 import Donut from "../../../../public/assets/donut.png";
 import { hub_content } from "@/utils/contentUtils";
@@ -51,13 +51,13 @@ export default function Hub() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: false, amount: 0.25 }}
-                    className="flex md:block items-center"
+                    className="flex md:block justify-center items-center"
                 >
                     <Button>
-                        <motion.div variants={fadeIn('left', 'tween', 0.2, 1)} className="flex py-5 px-6 sm:px-14 sm:py-8">
+                        <div className="flex py-5 px-6 sm:px-14 sm:py-8">
                             <span className="flex justify-center items-center font-dm font-normal text-[16px] md:text-[20px]">Cosmos HUB</span>
                             <FiChevronRight className="w-8 sm:w-10 md:w-14 h-6 md:h-8 delay-100 transition-all group-hover:translate-x-2" />
-                        </motion.div>
+                        </div>
                     </Button>
                 </motion.div>
             </div>
@@ -76,10 +76,12 @@ function HubComponents({ title, text, image }: HubComponentsTypes) {
         >
             <motion.div
                 variants={textVariant(0.3, 1)}
+                className="flex justify-center md:block"
             >
                 <Image
                     src={image}
                     alt={text}
+                    className="flex md:block justify-center items-center m-0"
                 />
             </motion.div>
             <motion.div
