@@ -2,8 +2,8 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import { FiChevronRight } from "react-icons/fi";
 import Helix from "../../../../public/assets/helix.png";
-import { slideIn, textVariant } from "@/utils/motionUtils";
-import { TypingText } from "../CustomTexts";
+import { textVariant } from "@/utils/motionUtils";
+import { TypingText } from "../CustomText";
 import { Button } from "../CustomButton";
 
 export default function Community() {

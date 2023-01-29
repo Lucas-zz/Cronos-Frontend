@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Button({ children }: any) {
+export function Button({ children }: any) {
     return (
         <motion.button
             whileHover={{ scale: 1.1 }}
@@ -9,6 +9,5 @@ export default function Button({ children }: any) {
         >
             {children}
         </motion.button>
-
     );
 };
