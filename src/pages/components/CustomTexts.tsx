@@ -2,7 +2,7 @@ import { textContainer, textVariant2 } from "@/utils/motionUtils";
 import { TypingTextTypes } from "@/utils/typesUtils";
 import { motion } from "framer-motion";
 
-export function TypingText({ title, textStyles }: TypingTextTypes) {
+export default function TypingText({ title, textStyles }: TypingTextTypes) {
     return (
         <motion.p
             variants={textContainer}
