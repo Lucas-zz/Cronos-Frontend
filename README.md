@@ -25,7 +25,7 @@
 
 ## About
 
-<p>This Landing Page was part of a challenge for an Entry-leve Full-Stack Role focusing on Frontend by <a href="https://web3.sonica.digital/">Sonica Digital</a>.</p>
+<p>This Landing Page was part of a challenge for an Entry-level Full-Stack Role focusing on Frontend by <a href="https://web3.sonica.digital/">Sonica Digital</a>.</p>
 <p>This was my first time using Next.js 13 and Framer Motion, so it was a great learning experience on all levels. Besides, I had a great time developing this project.</p>
 <p>You can explore it by clicking <a href="https://sonica-frontend-challenge.vercel.app/">here</a>.</p>
 
@@ -63,10 +63,10 @@ Before you begin, you will need to have the following tools installed on your ma
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/Lucas-zz/Pokedex_Front.git
+$ git clone https://github.com/Lucas-zz/Sonica-Frontend-Challenge
 
 # Access the project folder cmd/terminal
-$ cd Pokedex_Front
+$ cd Sonica-Frontend-Challenge
 
 # Install the dependencies
 $ npm install
@@ -88,8 +88,6 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ---
 
