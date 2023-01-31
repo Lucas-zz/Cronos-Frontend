@@ -11,7 +11,7 @@
 
 ---
 
-<p style="display:flex; align-items:center; justify-content:center; gap:5px; line-height:30px" justify="center">
+<p align="center">
   <a href="#about">About</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#pre-requisites">Pre-requisites</a> •
